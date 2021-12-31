@@ -1,1 +1,1 @@
-N3O Ltd is a technology company currently specialising in the not-for-profit sector. You can find out more about what we do and ways to contact us at [n3o.ltd](https://n3o.ltd).
+N3O Ltd is a technology company based in London focused on helping organisations in the not-for-profit sector achieve more. You can find out more about what we do and ways to contact us at [n3o.ltd](https://n3o.ltd).
