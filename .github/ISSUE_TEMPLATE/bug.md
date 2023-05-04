@@ -1,52 +1,62 @@
-name: "🐛 Bug Report"
-description: We broke something, again
+name: Bug Report
+description: File a bug report
 title: "[Bug]: "
-labels: ["type/bug"]
+labels: ["bug", "triage"]
+assignees:
+  - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting an issue!
-
-  - type: textarea
-    id: bug-steps
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
     attributes:
-      label: What are the steps to reproduce this issue?
-      placeholder: |
-        1. 
-        2. 
-        3. …
-        4. See error
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
-
-  - type: textarea
-    id: bug-description
+  - type: dropdown
+    id: version
     attributes:
-      label: What happens?
-      description: A clear and concise description of what the bug is.
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
     validations:
       required: true
-
-  - type: textarea
-    id: bug-expectation
+  - type: dropdown
+    id: browsers
     attributes:
-      label: What were you expecting to happen?
-      description: A clear and concise description of what was supposed to happen.
-    validations:
-      required: true
-
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
   - type: textarea
-    id: bug-logs
+    id: logs
     attributes:
-      label: Paste any relevant logs, error output, etc.
-      description: |
-        Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-        (If it’s long, please paste to https://gist.github.com/ and insert the link here.)
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-
-  - type: textarea
-    id: bug-context
+  - type: checkboxes
+    id: terms
     attributes:
-      label: Additional context
-      description: Add any other context you can provide about the problem here.
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
