@@ -1,3 +1,10 @@
+---
+name: API Issue
+about: Use this template to report issues related to APIs
+title: "[API Issue] "
+labels: api, bug
+---
+
 ## Issue Details
 **API Endpoint**:
 **Subscription Name**:
